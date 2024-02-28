@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import './_mixin';
+@import './varibles';
+
+*{
+    margin:0 ;
+    padding: 0;
+}
+
+body {
+    font-family:"Cairo", sans-serif;
+    font-style:normal ;
+}
+
+
+header {
+    .navbar {
+        border-bottom:1px solid $gray-color ;
+        .nav-link {
+            font-size: 20px;
+            margin-right: 120px;
+        }
+
+        .navbar-brand {
+            img {
+                width:70px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+main {
+    section {
+        &.identification {
+            padding: 100px;
+            border-bottom: 1px solid $gray-color;
+
+
+            .title{
+                @include title($main-color,$main-color);
+            }
+
+            .identification-text {
+                margin-top: 50px;
+                font-size: 30px;
+                text-align: center;
+                
+            }
+        }
+
+
+        &.services {
+            margin-top: 100px;
+            .title {
+                @include title($main-color,$main-color)
+            }
+
+            .server {
+                margin-top: 20px;
+                text-align: center;
+                svg {
+                    font-size: 50px;
+                    font-weight: bold;
+                    text-align: center;                 
+                }
+                
+                span{
+                    color: $main-color;
+                    font-size: 25px;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+                p{
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: black;
+                }
+            }
+        }
+
+        &.travels {
+            margin-top: 100px;
+
+            
+        }
+    }
+}

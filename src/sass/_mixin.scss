@@ -1,0 +1,30 @@
+@mixin title($color,$background-color){
+  color: $color;
+  font-size: bold;
+  line-height: 35px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    color: $color;
+    background-color: $background-color;
+    height: 100%;
+    width:10px;
+    top: 0px;
+    right: -30px;
+  }
+}
+
+@mixin button ($color,$background-color){
+  color: $color;
+  background-color: $background-color;
+  padding: 20px 40px;
+  border: 1px solid #B1AEAE;
+  border-radius: 3px;
+  transition: all .5s;
+  cursor: pointer;
+  &:hover {
+    color: $background-color;
+    $background-color:$color;
+  }
+}
