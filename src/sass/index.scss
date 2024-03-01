@@ -16,6 +16,8 @@ body {
 header {
     .navbar {
         border-bottom:1px solid $gray-color ;
+     background-color: $main-color;
+     padding: 10px;
         .nav-link {
             font-size: 20px;
             margin-right: 120px;
@@ -33,7 +35,7 @@ header {
 main {
     section {
         &.identification {
-            padding: 100px;
+            padding-top: 120px;
             border-bottom: 1px solid $gray-color;
 
 
@@ -51,7 +53,8 @@ main {
 
 
         &.services {
-            margin-top: 100px;
+            background-color: $color-dark-white;
+           padding-top: 70px;
             .title {
                 @include title($main-color,$main-color)
             }
@@ -82,9 +85,69 @@ main {
         }
 
         &.travels {
-            margin-top: 100px;
-
+            padding-top: 100px;
+            padding-bottom: 50px;
             
+            h2{
+                @include title($main-color,$main-color);
+                margin-bottom: 30px;
+            }
+
+            .card {
+                h5{
+                    // font-weight: bold;
+                    font-size: 30px;
+                    color: black;
+                    line-height: 10px;
+                    margin-bottom: 15px;
+                }
+
+                p{
+                    color: green;
+                    font-size: 20px;
+                }
+
+                a{
+                    @include button($color-white,$main-color);
+                    font-size: 20px;
+                }
+            }
         }
+    }
+}
+
+footer {
+
+
+    h2.title{
+        color: $main-color !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    padding-top: 50px;
+    background-color: $color-dark-white;
+    .social {
+        margin-top: 90px;
+     
+        ul{
+            list-style: none;
+            margin-right: 130px;
+
+            li{
+                margin-top: 40px;
+                font-size: 20px;
+                
+                svg{
+                    color: $main-color;
+                    margin-left: 20px;
+                    font-size: 20px;
+                }
+
+               
+            }
+        }
+
+
+    
     }
 }

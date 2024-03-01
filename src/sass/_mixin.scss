@@ -15,10 +15,10 @@
   }
 }
 
-@mixin button ($color,$background-color){
+@mixin button($color,$background-color){
   color: $color;
   background-color: $background-color;
-  padding: 20px 40px;
+  padding: 2px 30px;
   border: 1px solid #B1AEAE;
   border-radius: 3px;
   transition: all .5s;
