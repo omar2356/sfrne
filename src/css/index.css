@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-style: normal;
+}
+
+header .navbar {
+  border-bottom: 1px solid #B1AEAE;
+  background-color: #ff640b;
+  padding: 10px;
+}
+header .navbar .nav-link {
+  font-size: 20px;
+  margin-right: 120px;
+}
+header .navbar .navbar-brand img {
+  width: 70px;
+  height: 70px;
+}
+
+main section.identification {
+  padding-top: 120px;
+  border-bottom: 1px solid #B1AEAE;
+}
+main section.identification .title {
+  color: #ff640b;
+  font-size: bold;
+  line-height: 35px;
+  position: relative;
+}
+main section.identification .title::after {
+  content: "";
+  position: absolute;
+  color: #ff640b;
+  background-color: #ff640b;
+  height: 100%;
+  width: 10px;
+  top: 0px;
+  right: -30px;
+}
+main section.identification .identification-text {
+  margin-top: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+main section.services {
+  background-color: #F2F2F0;
+  padding-top: 70px;
+}
+main section.services .title {
+  color: #ff640b;
+  font-size: bold;
+  line-height: 35px;
+  position: relative;
+}
+main section.services .title::after {
+  content: "";
+  position: absolute;
+  color: #ff640b;
+  background-color: #ff640b;
+  height: 100%;
+  width: 10px;
+  top: 0px;
+  right: -30px;
+}
+main section.services .server {
+  margin-top: 20px;
+  text-align: center;
+}
+main section.services .server svg {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+main section.services .server span {
+  color: #ff640b;
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+main section.services .server p {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+main section.travels {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+main section.travels h2 {
+  color: #ff640b;
+  font-size: bold;
+  line-height: 35px;
+  position: relative;
+  margin-bottom: 30px;
+}
+main section.travels h2::after {
+  content: "";
+  position: absolute;
+  color: #ff640b;
+  background-color: #ff640b;
+  height: 100%;
+  width: 10px;
+  top: 0px;
+  right: -30px;
+}
+main section.travels .card h5 {
+  font-size: 30px;
+  color: black;
+  line-height: 10px;
+  margin-bottom: 15px;
+}
+main section.travels .card p {
+  color: black;
+  font-size: 20px;
+  color: #ff640b;
+}
+main section.travels .card a {
+  color: #ffffff;
+  background-color: #ff640b;
+  padding: 2px 30px;
+  border: 1px solid #B1AEAE;
+  border-radius: 3px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 20px;
+}
+main section.travels .card a:hover {
+  color: #ff640b;
+}
+
+footer {
+  padding-top: 50px;
+  background-color: #F2F2F0;
+}
+footer h2.title {
+  color: #ff640b !important;
+  text-align: center;
+  margin-bottom: 20px;
+}
+footer .social {
+  margin-top: 90px;
+}
+footer .social ul {
+  list-style: none;
+}
+footer .social ul li {
+  margin-top: 40px;
+  font-size: 20px;
+}
+footer .social ul li svg {
+  color: #ff640b;
+  margin-left: 20px;
+  font-size: 20px;
+}
+footer .map {
+  padding: 20px 0;
+}
+footer .copy {
+  text-align: center;
+  color: black;
+  background-color: azure;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

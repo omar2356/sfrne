@@ -15,16 +15,26 @@
   }
 }
 
-@mixin button($color,$background-color){
+@mixin button($color,$background-color ,$border-color ){
   color: $color;
   background-color: $background-color;
   padding: 2px 30px;
-  border: 1px solid #B1AEAE;
+  border: 1px solid $border-color;
   border-radius: 3px;
   transition: all .5s;
   cursor: pointer;
   &:hover {
+    background-color: $color;
     color: $background-color;
-    $background-color:$color;
   }
 }
+
+
+
+@mixin title-travel( $color) {
+  color: $color;
+  font-size: bold;
+  line-height: 35px;
+  position: relative;
+
+  }

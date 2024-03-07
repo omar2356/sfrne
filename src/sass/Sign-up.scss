@@ -1,0 +1,72 @@
+@import './_mixin';
+@import './_varibles';
+
+
+section{
+    &.sign {
+        padding-top: 120px;
+        padding-bottom: 100px;
+        .card {
+            
+            padding: 50px 20px;
+            border-radius: 3%;
+            border: 1px solid $gray-color;
+
+        }
+
+        .title {
+            @include title($main-color,$main-color)
+        };
+
+        label {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .create-acount-button {
+            display: flex;
+            
+            justify-content: center;
+            .button {
+                @include button($color-white,$main-color,$main-color)
+            }
+
+            a {
+                color: $main-color !important;
+                margin-right: 15px;
+                font-size: 20px;
+            
+            }
+        }
+    }
+}
+
+
+@media (max-width:992px) {
+    section {
+        &.sign { 
+            .title {
+                text-align: center;
+                margin-bottom: 20px;
+                &::after{
+                    display: none;
+                }
+            }
+
+            .create-acount-button {
+                a{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    section {
+        &.sign {
+            padding-top: 120px;
+        }
+    }
+}

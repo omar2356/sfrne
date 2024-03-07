@@ -1,0 +1,78 @@
+@import './_mixin';
+@import './_varibles';
+
+
+header {
+    .navbar {
+        .navbar-nav{
+            margin-left: 75px;
+            font-size: 25px;
+            font-weight: bold
+        }
+    }
+}
+
+section {
+    &.identification{
+        
+        .title-travel {
+            @include title-travel($main-color);
+            }
+        }
+
+        &.cards {
+            padding: 100px;
+
+            .card-cascade {
+
+                margin: 20px 10px;
+
+            
+                .card-img-top{
+                    height: 200px;
+                    width: 100%;
+                    
+                }
+
+
+                .card-body-cascade {
+
+                    .pink-text {
+                        font-weight: bold;
+                        font-size: 20px;
+                        color: $main-color;
+
+                        svg {
+                            color: $main-color;
+                        }
+                    }
+
+                    .card-text {
+                        font-size: 20px;
+                        color: black;
+                        font-weight: normal;
+
+
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    
+    }
+
+
+    @media (max-width:768px) {
+        section {
+            &.cards {
+                padding: 0;
+            }
+        }
+    }
+
+
+

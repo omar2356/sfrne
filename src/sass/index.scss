@@ -5,6 +5,7 @@
 *{
     margin:0 ;
     padding: 0;
+    overflow-x: none
 }
 
 body {
@@ -12,15 +13,50 @@ body {
     font-style:normal ;
 }
 
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
 
 header {
     .navbar {
         border-bottom:1px solid $gray-color ;
-     background-color: $main-color;
-     padding: 10px;
-        .nav-link {
+        background-color: $main-color;
+        padding: 10px;
+
+        .login {
+            .button{
+                
+                margin-right: 10px;
+                font-size: 20px;
+                text-decoration: none;
+                @include button($color-white,$main-color,$color-white)
+            }
+        }
+
+
+        .nav-index {
             font-size: 20px;
-            margin-right: 120px;
+            margin-right: 70px;
         }
 
         .navbar-brand {
@@ -94,8 +130,13 @@ main {
             }
 
             .card {
+
+                .card-img-top {
+                    height: 400px;
+                }
+
                 h5{
-                    // font-weight: bold;
+                  
                     font-size: 30px;
                     color: black;
                     line-height: 10px;
@@ -103,12 +144,23 @@ main {
                 }
 
                 p{
-                    color: green;
+                    color: black;
                     font-size: 20px;
+                    color:$main-color;
+                
+                }
+
+                span {
+                    position: absolute;
+                    right: 337px;
+                    bottom: 68px;
+                    color: $main-color;
+                    font-size: 20px;
+                    font-weight: bold;
                 }
 
                 a{
-                    @include button($color-white,$main-color);
+                    @include button($color-white,$main-color , $main-color);
                     font-size: 20px;
                 }
             }
@@ -117,6 +169,8 @@ main {
 }
 
 footer {
+    padding-top: 50px;
+    background-color: $color-dark-white;
 
 
     h2.title{
@@ -124,14 +178,13 @@ footer {
         text-align: center;
         margin-bottom: 20px;
     }
-    padding-top: 50px;
-    background-color: $color-dark-white;
     .social {
         margin-top: 90px;
      
         ul{
             list-style: none;
-            margin-right: 130px;
+            
+          margin-bottom: 15px;
 
             li{
                 margin-top: 40px;
@@ -149,5 +202,164 @@ footer {
 
 
     
+    }
+
+    .map {
+        padding: 20px 0;
+    }
+
+    .copy {
+        text-align: center;
+        color: black;
+        padding: 10px;
+        font-size: 20px;
+      
+    }
+}
+
+
+@media (max-width:1400px) {
+    main {
+        section {
+            &.travels{
+                .card {
+                    span {
+                        right: 294px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:1220px){
+    .navbar {
+
+        .nav-index{
+            margin-right: 40px !important;
+           
+        }
+
+        .container{
+            margin-right: 50px;
+            margin-left: 10px;
+        }
+
+        .login {
+            a{
+              
+                font-size: 15px !important;
+                padding: 2px 15px !important;
+                margin-right: 20px !important;
+                justify-content: center;
+                display: flex;
+            }
+        }
+    }
+
+    main {
+        section {
+            &.travels{
+                .card {
+                    span {
+                        right: 249px;
+                        bottom: 67px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:992px){
+    main {
+        section {
+            &.travels{
+                .card {
+                    span {
+                        right: 188px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    main {
+        section {
+            &.travels{
+
+                .title {
+                    text-align: center;
+                    &::after{
+                        display: none;
+                    }
+                }
+
+
+                .card {
+                    span {
+                        right: 278px;
+                        bottom: 68px;
+                    }
+                }
+            }
+
+            &.identification {
+                .identification-text {
+                    font-size: 20px;
+                }
+
+                .title {
+                    text-align: center;
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+
+            &.services {
+                .title {
+                    text-align: center;
+                    margin-bottom:30px;
+                    &::after{
+                        display: none;
+                    }
+                }
+
+                .server {
+                    margin: 20px 50px ;
+                }
+            }
+        }
+    }
+
+    footer {
+        .social {
+            ul{
+               li{
+               text-align: center;
+               }
+            }
+        }
+    }
+
+}
+
+@media (max-width:576px) {
+    main {
+        section {
+
+            &.travels{
+                .card {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }

@@ -11,28 +11,32 @@
     
 
         <nav class="navbar navbar-expand-lg d-fixed fixed-top">
-          <div class="container">
-            <a class="navbar-brand" href="#">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
               <img src="./images/noun-plane-1445492.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active fw-bold" aria-current="page" href="#">شركة سفرني</a>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto ">
+                <li class="nav-item ">
+                  <a class="nav-link active fw-bold " aria-current="page" href="#">شركة سفرني</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#services">خدماتنا</a>
+                <li class="nav-item nav-index">
+                  <a class="nav-link " href="#services">خدماتنا</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-index">
                   <a class="nav-link " href="#travel" aria-disabled="true">الجولات السياحية</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-index">
                   <a class="nav-link " href="#communication" aria-disabled="true">تواصل معنا</a>
                 </li>
+              
               </ul>
+              <div class="login">
+                <a href="login.html" class="button">تسجيل دخول</a>
+              </div>
             </div>
           </div>
         </nav>
@@ -41,7 +45,7 @@
   
   <main>
 
-      <section class="identification">
+      <section class="identification hidden" >
         <div class="container">
           <h2 class="title">شركة سفرني</h2>
           <div class="row">
@@ -54,7 +58,7 @@
         </div>
       </section>
 
-      <section class="services" id="services">
+      <section class="services hidden" id="services">
         <div class="container">
         <h2 class="title">خدماتنا</h2>
         <div class="row">
@@ -92,7 +96,7 @@
         </div>
       </section>
 
-      <section class="travels">
+      <section class="travels hidden">
         <div class="container">
           <h2 class="title" id="travel">الجولات السياحية</h2>
         <div class="row">
@@ -100,19 +104,21 @@
             <div class="card mb-3">
               <img src="./images/travels/engin-yapici-WA1u0scVLZU-unsplash.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title">اسطنبول</h5>
-                <p class="card-text">1200$</p>
-                <a href="travle.html" class="btn button">خطوات الرحلة</a>
+                <h5 class="card-title"> سعر جولة اسطنبول</h5>
+                <p class="card-text count" id="numper-1"></p>
+                <span class="dolar">$</span>
+                <a href="travel.html" class="btn button">خطوات الرحلة</a>
               </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="card mb-3">
-              <img src="./images/travels/osman-koycu-c6qF_lYvu2I-unsplash (1).jpg" class="card-img-top" alt="...">
+              <img src="./images/travels/istockphoto-1293325404-612x612.jpg" class="card-img-top" alt="...">
               <div class="card-body text-center">
-                <h5 class="card-title ">الأردن</h5>
-                <p class="card-text ">800$</p>
-                <a href="travle.html" class="btn button">خظوات الرحلة</a>
+                <h5 class="card-title "> سعر جولة الرياض</h5>
+                <p class="card-text" id="numper-2"></p>
+                <span class="dolar">$</span>
+                <a href="travel-2.html" class="btn button">خظوات الرحلة</a>
               </div>
             </div>
           </div>
@@ -123,7 +129,7 @@
   </main>
 
   <footer>
-    <div class="container-fluid">
+    <div class="container-fluid hidden">
       <div class="row">
         <h2 class="title" id="communication">تواصل معنا</h2>
           <div class="col-md-6">   
@@ -145,11 +151,14 @@
           </div>
         </div>
           <div class="col-md-6">
-            <div class="map text-center">
-              <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d231234.5113516706!2d55.42050479014773!3d25.100533004725705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2ssa!4v1709230113139!5m2!1sar!2ssa" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="text-center">
+              <iframe class="w-100 map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d231234.5113516706!2d55.42050479014773!3d25.100533004725705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2ssa!4v1709230113139!5m2!1sar!2ssa" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
 
+      </div>
+      <div class="row">
+        <span class="copy">جميع الحقوق محوظة &copy;  <span id="year"> </span></span>
       </div>
     </div>
   </footer>
